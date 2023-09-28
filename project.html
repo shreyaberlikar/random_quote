@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Quote Generator</title>
+</head>
+
+<body>
+<p align="margin-top"><b>Random Quote Generator</b></p>
+    <div class="quote-container">
+        <h2>Quote of the day..!!</h2>
+        <h3>
+            <i class="fas fa-quote-left"></i>
+            <span class="quote" id="quote"></span>
+            <i class="fas fa-quote-right"></i>
+            </h3>
+        <p class="quote"></p>
+        <button id="generate-button">New Quote</button>
+    </div>
+   </body>
+  
+    
+    <script>
+ 
+    const quotes = [
+    "Live in the momemt..!! ",
+    "Do more of what you love..!!",
+    "You are perfect Just the way you are :)",
+    "Live What You Love <3",
+    "Act as if what you do makes a difference.It does..",
+    "Let your Soul shine..<3",
+    "You are enough just as you are...",
+    "It's a beautiful day.Wake in the morking with a winged heart and thanks for another day of loving...",
+    "Ohh,what a beautiful morning.Ohh,what a beautiful day!!",
+    ":) Today is great day to smile and be Happy (:",
+    "Think of all the beauty still left around you and be happy.",
+    "Don’t waste your time in anger, regrets, worries, and grudges. Life is too short to be unhappy.",
+    "If you want to be happy, do not dwell in the past, do not worry about the future, focus on living fully in the present.",
+    "I am both happy and sad at the same time, and I'm still trying to figure out how that could be",
+    "Do not set aside your happiness. Do not wait to be happy in the future. The best time to be happy is always now.",
+    "The real things haven't changed. It is still best to be honest and truthful; to make the most of what we have; to be happy with simple pleasures; and have courage when things go wrong.",
+    "If you have good thoughts they will shine out of your face like sunbeams and you will always look lovely.",
+    "All you need in this life is ignorance and confidence, and then success is sure",
+    "When tempted to fight fire with fire, remember that the Fire Department usually uses water.",
+    "Age is of no importance unless you’re a cheese",
+    "It is bad to suppress laughter",
+    "If you try to fail and succeed, which have you done?",
+    "Confidence is 10% hard work and 90% delusion",
+    "If hard work is the key to success, most people would rather pick the lock."
+ ];
+function generateRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomIndex];
+    document.querySelector(".quote").textContent = quote;
+}
+document.querySelector("#generate-button").addEventListener("click", generateRandomQuote);
+generateRandomQuote();
+    </script>
+
+    <style>
+.fa-quote-left, .fa-quote-right {
+    font-size: 35px;
+    color: rgb(179, 0, 0);
+}
+.quote-container {
+text-align: center;
+margin-top: 100px;
+transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 10px;
+    motion-rotation: reverse;
+
+}
+
+
+ .quote{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#generate-button{
+    cursor: pointer;
+    border: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+    border-color:rgb(227, 13, 192);
+    border-style: inset;
+ }
+
+  
+body{
+    min-height:100vh;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    /*background-image: linear-gradient(to right bottom, rgb(255, 128, 128), #ffedbca8);*/
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-style: solid;
+    border-color: rgb(133, 7, 244);
+
+    background-image: url('butter1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+div{
+    border-top-left-radius: 20cm;
+      
+}
+p{
+            margin-top: 0px;
+            text-align: left;
+            position: absolute;
+            width: 100%;
+            top:0%;
+            font-size: 2em;
+        
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.h3{
+    display: block;
+    font-size: 2em;
+    margin-top: 67em;
+    margin-bottom: o.67em;
+    font-variant-alternates: normal;
+
+ }
+
+
+    </style>
+
+</body>
+</html>
